@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beauty Salon Booking</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#fff5f7;
+}
+
+header{
+background:#e91e63;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+nav{
+background:#f8bbd0;
+padding:15px;
+text-align:center;
+}
+
+nav a{
+margin:0 15px;
+text-decoration:none;
+color:black;
+font-weight:bold;
+}
+
+section{
+padding:40px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 2px 8px rgba(0,0,0,.1);
+margin-bottom:20px;
+}
+
+h2{
+color:#e91e63;
+margin-bottom:15px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+table th,
+table td{
+border:1px solid #ddd;
+padding:10px;
+}
+
+input,
+select{
+width:100%;
+padding:10px;
+margin-bottom:10px;
+}
+
+button{
+background:#e91e63;
+color:white;
+border:none;
+padding:12px 20px;
+cursor:pointer;
+border-radius:8px;
+}
+
+footer{
+background:#e91e63;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Beauty Glow Salon</h1>
+<p>Sistem Booking Salon Online</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#layanan">Layanan</a>
+<a href="#booking">Booking</a>
+</nav>
+
+<section id="home">
+
+<div class="card">
+<h2>Tentang Salon</h2>
+
+<p>
+Beauty Glow Salon menyediakan layanan
+Hair Cut, Hair Spa, Hair Coloring,
+Manicure dan Pedicure dengan tenaga profesional.
+</p>
+
+</div>
+
+</section>
+
+<section id="layanan">
+
+<div class="card">
+
+<h2>Daftar Layanan</h2>
+
+<table>
+
+<tr>
+<th>Layanan</th>
+<th>Harga</th>
+</tr>
+
+<tr>
+<td>Hair Cut</td>
+<td>Rp50.000</td>
+</tr>
+
+<tr>
+<td>Hair Spa</td>
+<td>Rp120.000</td>
+</tr>
+
+<tr>
+<td>Hair Coloring</td>
+<td>Rp250.000</td>
+</tr>
+
+<tr>
+<td>Manicure & Pedicure</td>
+<td>Rp80.000</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<section id="booking">
+
+<div class="card">
+
+<h2>Form Booking</h2>
+
+<form id="bookingForm">
+
+<input
+type="text"
+id="nama"
+placeholder="Nama Pelanggan"
+required>
+
+<input
+type="text"
+id="hp"
+placeholder="Nomor HP"
+required>
+
+<select id="layanan">
+
+<option>Hair Cut</option>
+<option>Hair Spa</option>
+<option>Hair Coloring</option>
+<option>Manicure & Pedicure</option>
+
+</select>
+
+<input
+type="date"
+id="tanggal"
+required>
+
+<button type="submit">
+Booking Sekarang
+</button>
+
+</form>
+
+</div>
+
+<div class="card">
+
+<h2>Data Booking</h2>
+
+<table id="bookingTable">
+
+<tr>
+<th>Nama</th>
+<th>No HP</th>
+<th>Layanan</th>
+<th>Tanggal</th>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Beauty Glow Salon
+</footer>
+
+<script>
+
+const form =
+document.getElementById("bookingForm");
+
+const table =
+document.getElementById("bookingTable");
+
+form.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+let nama =
+document.getElementById("nama").value;
+
+let hp =
+document.getElementById("hp").value;
+
+let layanan =
+document.getElementById("layanan").value;
+
+let tanggal =
+document.getElementById("tanggal").value;
+
+let row =
+table.insertRow();
+
+row.insertCell(0).innerHTML = nama;
+row.insertCell(1).innerHTML = hp;
+row.insertCell(2).innerHTML = layanan;
+row.insertCell(3).innerHTML = tanggal;
+
+form.reset();
+
+alert("Booking berhasil!");
+
+});
+
+</script>
+
+</body>
+</html>
