@@ -5,10 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Beauty Glow Salon</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -16,22 +15,25 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
-body{
-background:#fff7fa;
-color:#333;
+html{
+scroll-behavior:smooth;
 }
 
-/* NAVBAR */
+body{
+background:#fff7fb;
+color:#333;
+}
 
 nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 10%;
+padding:20px 8%;
 background:white;
-box-shadow:0 2px 10px rgba(0,0,0,.05);
 position:sticky;
 top:0;
+z-index:100;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
 
 .logo{
@@ -43,7 +45,7 @@ color:#ff4f9a;
 nav ul{
 display:flex;
 list-style:none;
-gap:25px;
+gap:20px;
 }
 
 nav a{
@@ -52,31 +54,24 @@ color:#444;
 font-weight:500;
 }
 
-/* HERO */
-
 .hero{
-height:85vh;
+height:90vh;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
-background:linear-gradient(
-135deg,
-#ffd6e8,
-#ffeef5
-);
+background:linear-gradient(135deg,#ffd6ea,#fff);
 }
 
-.hero-content h1{
+.hero h1{
 font-size:55px;
 color:#ff4f9a;
-margin-bottom:15px;
 }
 
-.hero-content p{
+.hero p{
+margin:15px 0;
 font-size:18px;
-margin-bottom:25px;
 }
 
 .btn{
@@ -84,144 +79,148 @@ display:inline-block;
 padding:14px 28px;
 background:#ff4f9a;
 color:white;
-border-radius:30px;
 text-decoration:none;
-font-weight:600;
-transition:.3s;
+border-radius:30px;
 }
-
-.btn:hover{
-transform:translateY(-3px);
-}
-
-/* SECTION */
 
 section{
-padding:80px 10%;
+padding:80px 8%;
 }
 
-.section-title{
+.title{
 text-align:center;
-font-size:35px;
 margin-bottom:40px;
 color:#ff4f9a;
 }
 
-/* LAYANAN */
-
-.services{
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+gap:20px;
 }
 
 .card{
 background:white;
-padding:25px;
+padding:20px;
 border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
-.card h3{
-margin-bottom:10px;
-color:#ff4f9a;
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:15px;
 }
 
 .price{
-font-size:22px;
 font-weight:bold;
 margin-top:10px;
+color:#ff4f9a;
 }
 
-/* BOOKING */
-
-.booking{
-max-width:700px;
+.booking-box{
+max-width:800px;
 margin:auto;
 background:white;
-padding:35px;
+padding:30px;
 border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
-.booking input,
-.booking select{
+input,
+select{
 width:100%;
-padding:14px;
+padding:12px;
 margin-bottom:15px;
 border:1px solid #ddd;
 border-radius:10px;
 }
 
-.booking button{
+button{
 width:100%;
-padding:15px;
-border:none;
+padding:14px;
 background:#ff4f9a;
+border:none;
 color:white;
-font-size:16px;
 border-radius:10px;
 cursor:pointer;
 }
 
-/* TABLE */
-
 table{
 width:100%;
-margin-top:30px;
+margin-top:25px;
 border-collapse:collapse;
-background:white;
-overflow:hidden;
-border-radius:15px;
 }
 
 th{
 background:#ff4f9a;
 color:white;
-padding:15px;
+padding:12px;
 }
 
 td{
-padding:12px;
-border-bottom:1px solid #eee;
+padding:10px;
+border:1px solid #eee;
 text-align:center;
 }
 
-/* FOOTER */
+.delete-btn{
+background:red;
+padding:8px;
+border:none;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
 
 footer{
 background:#ff4f9a;
 color:white;
 text-align:center;
 padding:25px;
-margin-top:60px;
 }
 
+@media(max-width:768px){
+
+.hero h1{
+font-size:35px;
+}
+
+nav{
+flex-direction:column;
+gap:10px;
+}
+
+}
 </style>
 </head>
 
 <body>
 
 <nav>
-<div class="logo">Beauty Glow</div>
+
+<div class="logo">
+Beauty Glow
+</div>
 
 <ul>
-<li><a href="#">Home</a></li>
 <li><a href="#layanan">Layanan</a></li>
+<li><a href="#galeri">Galeri</a></li>
 <li><a href="#booking">Booking</a></li>
 </ul>
+
 </nav>
 
 <section class="hero">
 
-<div class="hero-content">
+<div>
 
 <h1>Beauty Glow Salon</h1>
 
 <p>
-Salon modern dengan layanan kecantikan terbaik
-untuk membuatmu tampil lebih percaya diri.
+Salon modern dengan pelayanan terbaik
+untuk kecantikan dan perawatan rambut.
 </p>
 
 <a href="#booking" class="btn">
@@ -232,13 +231,29 @@ Booking Sekarang
 
 </section>
 
+<section>
+
+<h2 class="title">
+Tentang Kami
+</h2>
+
+<div class="card">
+
+Beauty Glow Salon menyediakan layanan
+Hair Cut, Hair Spa, Hair Coloring,
+Manicure dan Pedicure dengan tenaga profesional.
+
+</div>
+
+</section>
+
 <section id="layanan">
 
-<h2 class="section-title">
+<h2 class="title">
 Layanan Kami
 </h2>
 
-<div class="services">
+<div class="grid">
 
 <div class="card">
 <h3>Hair Cut</h3>
@@ -254,7 +269,7 @@ Layanan Kami
 
 <div class="card">
 <h3>Hair Coloring</h3>
-<p>Warna rambut sesuai tren.</p>
+<p>Pewarnaan rambut modern.</p>
 <div class="price">Rp250.000</div>
 </div>
 
@@ -268,27 +283,117 @@ Layanan Kami
 
 </section>
 
+<section id="galeri">
+
+<h2 class="title">
+Galeri Salon
+</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://picsum.photos/500/300?1">
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/500/300?2">
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/500/300?3">
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">
+Testimoni Pelanggan
+</h2>
+
+<div class="grid">
+
+<div class="card">
+⭐⭐⭐⭐⭐
+<br><br>
+"Hasilnya sangat memuaskan!"
+<br><br>
+<b>- Siti</b>
+</div>
+
+<div class="card">
+⭐⭐⭐⭐⭐
+<br><br>
+"Salon favorit saya."
+<br><br>
+<b>- Ayu</b>
+</div>
+
+<div class="card">
+⭐⭐⭐⭐⭐
+<br><br>
+"Pelayanan sangat ramah."
+<br><br>
+<b>- Nabila</b>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="grid">
+
+<div class="card">
+<h1>1000+</h1>
+<p>Pelanggan</p>
+</div>
+
+<div class="card">
+<h1>15</h1>
+<p>Beautician</p>
+</div>
+
+<div class="card">
+<h1>4.9★</h1>
+<p>Rating</p>
+</div>
+
+<div class="card">
+<h1>5 Tahun</h1>
+<p>Pengalaman</p>
+</div>
+
+</div>
+
+</section>
+
 <section id="booking">
 
-<h2 class="section-title">
+<h2 class="title">
 Booking Online
 </h2>
 
-<div class="booking">
+<div class="booking-box">
 
 <form id="bookingForm">
 
-<input type="text"
+<input
+type="text"
 id="nama"
 placeholder="Nama Pelanggan"
 required>
 
-<input type="text"
+<input
+type="text"
 id="hp"
 placeholder="Nomor HP"
 required>
 
-<select id="layananPilihan">
+<select id="layanan">
 
 <option>Hair Cut</option>
 <option>Hair Spa</option>
@@ -315,6 +420,7 @@ Booking Sekarang
 <th>No HP</th>
 <th>Layanan</th>
 <th>Tanggal</th>
+<th>Aksi</th>
 </tr>
 
 </table>
@@ -329,41 +435,97 @@ Booking Sekarang
 
 <script>
 
+let bookings =
+JSON.parse(localStorage.getItem("bookings")) || [];
+
 const form =
 document.getElementById("bookingForm");
 
 const table =
 document.getElementById("bookingTable");
 
+function tampilkanData(){
+
+table.innerHTML = `
+<tr>
+<th>Nama</th>
+<th>No HP</th>
+<th>Layanan</th>
+<th>Tanggal</th>
+<th>Aksi</th>
+</tr>
+`;
+
+bookings.forEach((item,index)=>{
+
+table.innerHTML += `
+<tr>
+<td>${item.nama}</td>
+<td>${item.hp}</td>
+<td>${item.layanan}</td>
+<td>${item.tanggal}</td>
+<td>
+<button class="delete-btn"
+onclick="hapusBooking(${index})">
+Hapus
+</button>
+</td>
+</tr>
+`;
+
+});
+
+}
+
 form.addEventListener("submit",function(e){
 
 e.preventDefault();
 
-let nama =
-document.getElementById("nama").value;
+const data = {
 
-let hp =
-document.getElementById("hp").value;
+nama:
+document.getElementById("nama").value,
 
-let layanan =
-document.getElementById("layananPilihan").value;
+hp:
+document.getElementById("hp").value,
 
-let tanggal =
-document.getElementById("tanggal").value;
+layanan:
+document.getElementById("layanan").value,
 
-let row =
-table.insertRow();
+tanggal:
+document.getElementById("tanggal").value
 
-row.insertCell(0).innerHTML = nama;
-row.insertCell(1).innerHTML = hp;
-row.insertCell(2).innerHTML = layanan;
-row.insertCell(3).innerHTML = tanggal;
+};
 
-alert("Booking berhasil!");
+bookings.push(data);
+
+localStorage.setItem(
+"bookings",
+JSON.stringify(bookings)
+);
+
+tampilkanData();
 
 form.reset();
 
+alert("Booking berhasil!");
+
 });
+
+function hapusBooking(index){
+
+bookings.splice(index,1);
+
+localStorage.setItem(
+"bookings",
+JSON.stringify(bookings)
+);
+
+tampilkanData();
+
+}
+
+tampilkanData();
 
 </script>
 
